@@ -297,7 +297,7 @@ export default function ChecklistSemanal() {
         >
             <div>
                 <h1 className="cabecalho">Checklist Semanal de Equipamentos</h1>
-                <img className="logo" src="/public/logo-branco-300x150.png" alt="" />
+                <img className="logo" src="/logo-branco-300x150.png" alt="logo Apetit" />
             </div>
             <form className="formulario" onSubmit={handleSubmit}>
                 {perguntas.map((grupo, i) =>
