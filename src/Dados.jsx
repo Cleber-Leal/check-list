@@ -315,6 +315,58 @@ const equipamentos = [
             "Choque elétrico.",
             "Contaminação dos alimentos armazenados."
         ]
+    },
+
+    {
+        "nomeEquipamento": "Processador de Alimentos",
+        "recomendacoesLimpeza": [
+            "Desligar da tomada antes de iniciar a limpeza.",
+            "Desmontar discos, lâminas e acessórios removíveis.",
+            "Lavar as peças removíveis com água morna e detergente neutro.",
+            "Secar completamente todas as peças antes da montagem.",
+            "Limpar a base do motor apenas com pano úmido."
+        ],
+        "oQueNaoFazer": [
+            "Não limpar o equipamento ligado à energia.",
+            "Não sobrecarregar o equipamento",
+            "Não utilizar jatos de água diretamente no equipamento.",
+            "Não manusear as lâminas sem cuidado.",
+            "Não operar o equipamento sem a tampa de proteção."
+        ],
+        "riscosSeNaoSeguir": [
+            "Choque elétrico.",
+            "Queima do motor.",
+            "Oxidação dos componentes.",
+            "Acidentes com cortes nas lâminas.",
+            "Contaminação cruzada dos alimentos."
+        ]
+    },
+    {
+        "nomeEquipamento": "Freezer Horizontal",
+        "recomendacoesLimpeza": [
+            "Desligar da tomada antes da limpeza.",
+            "Remover todos os produtos armazenados.",
+            "Realizar degelo quando houver excesso de gelo.",
+            "Limpar com pano macio, água e detergente neutro.",
+            "Secar completamente antes de religar o equipamento.",
+            "Limpar regularmente as borrachas de vedação."
+        ],
+        "oQueNaoFazer": [
+            "Não utilizar objetos pontiagudos para remover gelo.",
+            "Não utilizar produtos abrasivos.",
+            "Não utilizar jatos de água ou mangueiras.",
+            "Não armazenar produtos quentes diretamente no freezer.",
+            "Não bloquear a circulação interna de ar.",
+            "Não ligar o equipamento antes da secagem completa."
+        ],
+        "riscosSeNaoSeguir": [
+            "Perfuração do evaporador.",
+            "Perda de eficiência de congelamento.",
+            "Aumento do consumo de energia.",
+            "Choque elétrico.",
+            "Perda de alimentos por falha de refrigeração.",
+            "Danos permanentes ao sistema de refrigeração."
+        ]
     }
 ]
 
@@ -363,7 +415,7 @@ export default function Dados({ children }) {
 
 
     return (
-        <DadosContext.Provider value={{alertaExibido, setAlertaExibido, equipamentos, perguntas, respostas, setRespostas, observacoes, setObservacoes, submitted, setSubmitted, naoConformidades, setNaoConformidades }}>
+        <DadosContext.Provider value={{ alertaExibido, setAlertaExibido, equipamentos, perguntas, respostas, setRespostas, observacoes, setObservacoes, submitted, setSubmitted, naoConformidades, setNaoConformidades }}>
             {children}
         </DadosContext.Provider>
     )
