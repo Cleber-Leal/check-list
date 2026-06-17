@@ -182,7 +182,7 @@ export default function ChecklistSemanal() {
 
 
 
-    const { perguntas, respostas, setRespostas, observacoes, setObservacoes, submitted, setSubmitted, naoConformidades, setNaoConformidades } = useContext(DadosContext);
+    const {setAlertaExibido, perguntas, respostas, setRespostas, observacoes, setObservacoes, submitted, setSubmitted, naoConformidades, setNaoConformidades } = useContext(DadosContext);
 
 
     const handleResposta = (id, valor) => {
@@ -222,7 +222,7 @@ export default function ChecklistSemanal() {
         e.preventDefault();
 
         const problemas = verificarNaoConformidades();
-
+        setAlertaExibido(false)
         setNaoConformidades(problemas);
         setSubmitted(true);
         navigate("/return");

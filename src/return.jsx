@@ -1,20 +1,41 @@
 import { useContext } from "react";
 import { DadosContext } from "./Dados";
+import { useEffect, useRef } from "react";
 
 
 
 export default function Return() {
 
-        const { perguntas, respostas, setRespostas, observacoes, setObservacoes, submitted, setSubmitted, naoConformidades, setNaoConformidades } = useContext(DadosContext);
+    const {alertaExibido, setAlertaExibido, perguntas, respostas, setRespostas, observacoes, setObservacoes, submitted, setSubmitted, naoConformidades, setNaoConformidades } = useContext(DadosContext);
+    const ultimoTamanho = useRef(0);
+
+    useEffect(() => {
+        if (
+            naoConformidades.length > 0 &&
+            !alertaExibido
+        ) {
+            alert(
+                "Você possui não conformidades, por favor verificar na aba Não Conformidades"
+            );
+
+            setAlertaExibido(true);
+        }
+    }, [
+        naoConformidades,
+        alertaExibido,
+        setAlertaExibido
+    ]);
+
     return (
-        <div
+        < div
             style={{
                 maxWidth: "1000px",
                 margin: "0 auto",
                 padding: "20px"
-            }}
+            }
+            }
         >
-            <h1 style={{lineHeight:'1.1'}}>Checklist Semanal Sugestões</h1>
+            <h1 style={{ lineHeight: '1.1' }}>Checklist Semanal Sugestões</h1>
 
 
             {
@@ -35,6 +56,7 @@ export default function Return() {
 
             {
                 submitted && naoConformidades.length > 0 && (
+
                     <div
                         style={{
                             marginTop: "20px",
@@ -44,6 +66,7 @@ export default function Return() {
                             borderRadius: "8px"
                         }}
                     >
+
                         <h2>Não Conformidades Encontradas</h2>
 
                         {naoConformidades.map((item, index) => (
@@ -69,6 +92,6 @@ export default function Return() {
                     </div>
                 )
             }
-        </div>
+        </div >
     )
 }

@@ -111,14 +111,16 @@ export default function ModalCompleto() {
     const { equipamentos } = useContext(DadosContext);
 
     return (
-        <>
-            {equipamentos?.map((equipamento) => (
-                <Modal
-                    key={equipamento.nomeEquipamento}
-                    equipamento={equipamento}
-                />
-            ))}
-        </>
+        <section style={{margin:"0 auto", maxWidth:"1000px"}}>
+            
+                {equipamentos?.map((equipamento) => (
+                    <Modal
+                        key={equipamento.nomeEquipamento}
+                        equipamento={equipamento}
+                    />
+                ))}
+            
+        </section>
     );
 }
 

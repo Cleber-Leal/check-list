@@ -355,7 +355,7 @@ const equipamentos = [
 export const DadosContext = createContext()
 
 export default function Dados({ children }) {
-
+    const [alertaExibido, setAlertaExibido] = useState(false);
     const [respostas, setRespostas] = useState({});
     const [observacoes, setObservacoes] = useState("");
     const [submitted, setSubmitted] = useState(false);
@@ -363,7 +363,7 @@ export default function Dados({ children }) {
 
 
     return (
-        <DadosContext.Provider value={{ equipamentos, perguntas, respostas, setRespostas, observacoes, setObservacoes, submitted, setSubmitted, naoConformidades, setNaoConformidades }}>
+        <DadosContext.Provider value={{alertaExibido, setAlertaExibido, equipamentos, perguntas, respostas, setRespostas, observacoes, setObservacoes, submitted, setSubmitted, naoConformidades, setNaoConformidades }}>
             {children}
         </DadosContext.Provider>
     )
