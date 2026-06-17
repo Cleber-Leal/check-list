@@ -247,8 +247,8 @@ export default function ChecklistSemanal() {
             case "Geladeira":
                 return (
                     <>
-                        <img className="img-mt512" src="/public/mt512.png" alt="Controladora"  />
-                        <img src="/public/microventilador.png" alt="Microventilador" style={{ width: "25%", height: "45%", position: "absolute", bottom: "10px", right: "10px" }} />
+                        <img className="img-mt512" src="/mt512.png" alt="Controladora"  />
+                        <img src="/microventilador.png" alt="Microventilador" style={{ width: "25%", height: "45%", position: "absolute", bottom: "10px", right: "10px" }} />
 
                     </>
                 );
@@ -256,7 +256,7 @@ export default function ChecklistSemanal() {
             case "Fogão":
                 return (
                     <>
-                        <img src="/public/queimador.png" alt="Queimador" style={{ width: "35%", height: "75%", position: "absolute", top: "10px", left: "10px",  transform: "rotate(-45deg)" }} />
+                        <img src="/queimador.png" alt="Queimador" style={{ width: "35%", height: "75%", position: "absolute", top: "10px", left: "10px",  transform: "rotate(-45deg)" }} />
 
                     </>
                 );
@@ -264,15 +264,15 @@ export default function ChecklistSemanal() {
             case "Forno - Fritadeira - Chapa":
                 return (
                     <>
-                        <img  className="termostato-forno" src="/public/termostato.png" alt="Termostato"  />
+                        <img  className="termostato-forno" src="/termostato.png" alt="Termostato"  />
                     </>
                 );
 
             case "Buffet":
                 return (
                     <>
-                        <img className="img-mt512-buffet" src="/public/mt512.png"   />
-                        <img className="termostato-buffet" src="/public/termostato.png" alt="Termostato"  />
+                        <img className="img-mt512-buffet" src="/mt512.png"   />
+                        <img className="termostato-buffet" src="/termostato.png" alt="Termostato"  />
                     </>
                 );
 
