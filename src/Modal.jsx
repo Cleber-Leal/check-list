@@ -48,7 +48,7 @@ function Modal({ equipamento }) {
             >
 
                 <DialogTitle style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "10px" }}>
-                    {equipamento.nomeEquipamento} <IoIosCloseCircle size={30} style={{ justifySelf: "center" }} onClick={() => setOpen(!open)} />
+                    {equipamento.nomeEquipamento} <IoIosCloseCircle size={30} style={{ cursor:"pointer" }} onClick={() => setOpen(!open)} />
                 </DialogTitle>
 
                 <DialogContent dividers>
